@@ -1,0 +1,39 @@
+
+<ng-content select="h1"></ng-content>
+
+<div *nfIf="false">
+    <p [ngClass]="{'active': valor, 'disabled': !valor}">NgClass</p>
+    <p [ngStyle]="{'height': heightPX, 'background': backgroundColor}">NgStyle</p>
+</div> 
+<hr>
+
+<h2>ngModel</h2>
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+<br>
+{{msgErro}}
+
+<ul>
+    <li *ngFor="let item of list">{{item.nome}}</li>
+</ul>
+
+<hr>
+
+<h2>ng-template</h2>
+
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>{{item.nome}}</p>
+</ng-template>
+
+
+<ng-content select="h3"></ng-content>
+
+<hr>
+
+<h2>Pipe</h2>
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+<br><br>
+<li *ngFor="let item of list">{{item.nome | uppercase}}</li>
+<br><br>   
+Data: {{date | date: 'dd/MM/yyyy - HH:mm'}}
