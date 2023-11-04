@@ -9,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
     <h3>Final da Aula - ng-content </h3>
   </app-diretivas-atributos>
   <router-outlet></router-outlet>
-  -->
-  <app-diretivas-atributos></app-diretivas-atributos>`
+  <app-diretivas-atributos></app-diretivas-atributos>-->
+  <app-new-component></app-new-component>
+  `
 })
 
 export class AppComponent implements OnInit {
